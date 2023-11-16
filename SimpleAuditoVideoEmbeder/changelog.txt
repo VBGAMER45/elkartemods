@@ -1,0 +1,107 @@
+6.3
++Added support for Threads.net
+-Removed zippyshare
+
+6.2
++Added support for embedding remote pdf files links that end in .pdf
++Added support for YouTube Shorts
++Added support for fb.watch
+
+6.1
++Added support for Instagram reel media type links
++Added start time support for youtube videos
++Added support for Twitch Channels and Clips thanks to  tjbalon
++Added support MSNBC videos
++Added support NBC News videos
+!Fixed xhtml validation issues for some sites
+
+6.0
++Added a setting to show the original link after the embed is added.
++Added a setting to set the maximum number of emdeds to display per page load.
++Redid the entire replacement function with a callback. Allowed more control for the new setting features added and provides a better way to count number of embeds loaded.
+
++Added support for Reddit posts
++Added suppport for twitch clips thanks to  tjbalon
++Added suppport for github gists thanks to  tjbalon
++Updated spotify entry (now supports artist, track, playlists, and albums) tjbalon
++Added support for codepen.io
++Added back support for ustream.tv
++Added support for Gfycat
+
+
+5.5
+!Fixed Twitch.tv embed code
++Added support for videoclip.bg
++Added support for Telegram
++More support for youtu.be/watch?v=
+
+5.4
+!Removed old sites no longer supported
+HostingBulk.com
+HostingCup
+Movshare.net
+videobb.com/
+smotri.com
+g4tv.com
+www.xfire.com
+Trophy-clips.com
+Tangle.com
+video.mpora.com
+clipshack.com
+Stream.cz
+blogtv.com
+twitvid.com
+stagevu.com
+goear.com
+Clipfish.de
+mevio.com
+gametrailers.com
+sevenload.com
+MyVideo.de
+novamov.com
+UStream.tv
+collegehumor.com
+seenive.com
+vine.com
+Jpopsuki.tv
+vid.me
+tube.com
+
+5.3
++Added TikTok support
++Added support for Buzzsprout
++Added support for local/remote MP3 files
++Added support for Yarn video site.
+
+5.2
+!Must Update. Fix security issue with Local/Remote FLV fusing player_flv_maxi.swf FLV Player.
+Have removed the option to play FLV videos. Make sure this file is removed videos/player_flv_maxi.swf from your forum
+
+5.1
+!Updated imgur to supprot https:// and this format of links https://i.imgur.com/AAAAA
++Added support for Facebook Posts thanks to butch2k
++Added support for USNews.com thanks to butch2k
++Added support for local remote ogm and ogv files
++Added support for spotify thanks to butch2k
+
+
+5.0
++Added support for 1.1.x Elkarte
++Added imgur support
++Added youtube playlist support
++Added support for pastebin
++Added support for Ted Talks
++Added support for more types of twitch.tv urls
+
+4.2
+!Fixed some bugs with daily motion links 
+!Version checking now uses ssl
+
+4.1
++Added support for multiple regexmatch for the same website
++Now supports short dailymotion links
++Added support for streamable
++Added support for https for liveleak
+
+4.0
+First Release!

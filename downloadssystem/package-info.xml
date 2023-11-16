@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+
+<package-info xmlns="http://www.elkarte.net/site/package-info" xmlns:elk="http://www.elkarte.net/">
+	<id>vbgamer45:downloadsystem</id>
+	<name>Downloads System</name>
+	<type>modification</type>
+	<version>3.0.6</version>
+	
+	<install for="1.0 - 1.0.99">
+		<redirect url="?action=admin;area=downloads;sa=adminset">redirect.txt</redirect>
+		<readme>ReadMe.txt</readme>
+
+		<hook hook="integrate_admin_areas" function="downloads_integrate_admin_areas" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_menu_buttons" function="downloads_integrate_menu_buttons" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_actions" function="downloads_integrate_actions" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_load_permissions" function="downloads_integrate_load_permissions" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_whos_online" function="downloads_integrate_whos_online" file="SOURCEDIR/downloads.integrate.php" />
+		
+		<require-file name="star.gif" destination="IMAGESDIR" />
+		<require-file name="downloadsadmin.controller.php" destination="SOURCEDIR/admin" />
+		<require-file name="downloads.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="downloads.subs.php" destination="SUBSDIR" />
+		<require-file name="downloads.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Downloads.template.php" destination="THEMEDIR" />
+		<require-dir name="downloads" destination="BOARDDIR" />
+		<require-file name="Downloads.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Downloads.english-utf8.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Downloads.french.php" destination="LANGUAGEDIR/french" />
+		<code>downloadsinstall.php</code>
+	</install>
+	
+	<upgrade for="1.0 - 1.0.99">
+		<redirect url="?action=admin;area=downloads;sa=adminset">redirect.txt</redirect>
+		<readme>ReadMe.txt</readme>
+
+		<hook hook="integrate_admin_areas" function="downloads_integrate_admin_areas" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_menu_buttons" function="downloads_integrate_menu_buttons" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_actions" function="downloads_integrate_actions" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_load_permissions" function="downloads_integrate_load_permissions" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_whos_online" function="downloads_integrate_whos_online" file="SOURCEDIR/downloads.integrate.php" />
+
+		<require-file name="star.gif" destination="IMAGESDIR" />	
+		<require-file name="downloadsadmin.controller.php" destination="SOURCEDIR/admin" />
+		<require-file name="downloads.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="downloads.subs.php" destination="SUBSDIR" />
+		<require-file name="downloads.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Downloads.template.php" destination="THEMEDIR" />
+		<require-dir name="downloads" destination="BOARDDIR" />
+		<require-file name="Downloads.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Downloads.english-utf8.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Downloads.french.php" destination="LANGUAGEDIR/french" />
+		<code>downloadsinstall.php</code>
+	
+	</upgrade>
+	<uninstall for="1.0 - 1.0.99">
+
+		<hook reverse="true" hook="integrate_admin_areas" function="downloads_integrate_admin_areas" file="SOURCEDIR/downloads.integrate.php" />
+		<hook reverse="true" hook="integrate_menu_buttons" function="downloads_integrate_menu_buttons" file="SOURCEDIR/downloads.integrate.php" />
+		<hook reverse="true" hook="integrate_actions" function="downloads_integrate_actions" file="SOURCEDIR/downloads.integrate.php" />
+		<hook reverse="true" hook="integrate_load_permissions" function="downloads_integrate_load_permissions" file="SOURCEDIR/downloads.integrate.php" />
+		<hook reverse="true" hook="integrate_whos_online" function="downloads_integrate_whos_online" file="SOURCEDIR/downloads.integrate.php" />
+
+		<remove-file name="SOURCEDIR/admin/downloadsadmin.controller.php" />
+		<remove-file name="CONTROLLERDIR/downloads.controller.php" />
+		<remove-file name="SUBSDIR/downloads.subs.php" />
+		<remove-file name="SOURCEDIR/downloads.integrate.php" />
+		<remove-file name="THEMEDIR/Downloads.template.php" />
+		<remove-file name="LANGUAGEDIR/english/Downloads.english.php" />
+		<remove-file name="LANGUAGEDIR/english/Downloads.english-utf8.php" />
+		<remove-file name="LANGUAGEDIR/french/Downloads.french.php" />
+
+	</uninstall>
+
+
+<install for="1.1 - 1.1.99">
+		<redirect url="?action=admin;area=downloads;sa=adminset">redirect.txt</redirect>
+		<readme>ReadMe.txt</readme>
+
+		<hook hook="integrate_admin_areas" function="downloads_integrate_admin_areas" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_menu_buttons" function="downloads_integrate_menu_buttons" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_actions" function="downloads_integrate_actions2" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_load_permissions" function="downloads_integrate_load_permissions" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_whos_online" function="downloads_integrate_whos_online" file="SOURCEDIR/downloads.integrate.php" />
+		
+		<require-file name="star.gif" destination="IMAGESDIR" />
+		<require-file name="downloadsadmin.controller.php" destination="SOURCEDIR/admin" />
+		<require-file name="downloads.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="downloads.subs.php" destination="SUBSDIR" />
+		<require-file name="downloads.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Downloads.template.php" destination="THEMEDIR" />
+		<require-dir name="downloads" destination="BOARDDIR" />
+		<require-file name="Downloads.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Downloads.english-utf8.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Downloads.french.php" destination="LANGUAGEDIR/french" />
+		<code>downloadsinstall.php</code>
+	</install>
+	
+	<upgrade for="1.1 - 1.1.99">
+		<redirect url="?action=admin;area=downloads;sa=adminset">redirect.txt</redirect>
+		<readme>ReadMe.txt</readme>
+
+		<hook hook="integrate_admin_areas" function="downloads_integrate_admin_areas" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_menu_buttons" function="downloads_integrate_menu_buttons" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_actions" function="downloads_integrate_actions2" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_load_permissions" function="downloads_integrate_load_permissions" file="SOURCEDIR/downloads.integrate.php" />
+		<hook hook="integrate_whos_online" function="downloads_integrate_whos_online" file="SOURCEDIR/downloads.integrate.php" />
+
+		<require-file name="star.gif" destination="IMAGESDIR" />	
+		<require-file name="downloadsadmin.controller.php" destination="SOURCEDIR/admin" />
+		<require-file name="downloads.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="downloads.subs.php" destination="SUBSDIR" />
+		<require-file name="downloads.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Downloads.template.php" destination="THEMEDIR" />
+		<require-dir name="downloads" destination="BOARDDIR" />
+		<require-file name="Downloads.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Downloads.english-utf8.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Downloads.french.php" destination="LANGUAGEDIR/french" />
+		<code>downloadsinstall.php</code>
+	
+	</upgrade>
+	<uninstall for="1.1 - 1.1.99">
+
+		<hook reverse="true" hook="integrate_admin_areas" function="downloads_integrate_admin_areas" file="SOURCEDIR/downloads.integrate.php" />
+		<hook reverse="true" hook="integrate_menu_buttons" function="downloads_integrate_menu_buttons" file="SOURCEDIR/downloads.integrate.php" />
+		<hook reverse="true" hook="integrate_actions" function="downloads_integrate_actions2" file="SOURCEDIR/downloads.integrate.php" />
+		<hook reverse="true" hook="integrate_load_permissions" function="downloads_integrate_load_permissions" file="SOURCEDIR/downloads.integrate.php" />
+		<hook reverse="true" hook="integrate_whos_online" function="downloads_integrate_whos_online" file="SOURCEDIR/downloads.integrate.php" />
+
+		<remove-file name="SOURCEDIR/admin/downloadsadmin.controller.php" />
+		<remove-file name="CONTROLLERDIR/downloads.controller.php" />
+		<remove-file name="SUBSDIR/downloads.subs.php" />
+		<remove-file name="SOURCEDIR/downloads.integrate.php" />
+		<remove-file name="THEMEDIR/Downloads.template.php" />
+		<remove-file name="LANGUAGEDIR/english/Downloads.english.php" />
+		<remove-file name="LANGUAGEDIR/english/Downloads.english-utf8.php" />
+		<remove-file name="LANGUAGEDIR/french/Downloads.french.php" />
+	</uninstall>
+	
+</package-info>

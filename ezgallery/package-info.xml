@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+<package-info xmlns="http://www.elkarte.net/site/package-info" xmlns:elk="http://www.elkarte.net/">
+	<id>vbgamer45:ezgallery</id>
+	<name>ezGallery Lite</name>
+	<type>modification</type>
+	<version>5.6.1</version>
+
+	
+	<install for="1.0 - 1.0.99">
+		<readme>ReadMe.txt</readme>
+		<code>galleryinstall.php</code>
+		<hook hook="integrate_admin_areas" function="ezgallery_integrate_admin_areas" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_menu_buttons" function="ezgallery_integrate_menu_buttons" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_actions" function="ezgallery_integrate_actions" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_load_permissions" function="ezgallery_integrate_load_permissions" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_whos_online" function="ezgallery_integrate_whos_online" file="SOURCEDIR/gallery.integrate.php" />
+		
+		<require-file name="galleryadmin.controller.php" destination="SOURCEDIR/admin" />
+		<require-file name="Gallery.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="gallery.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Gallery.template.php" destination="THEMEDIR" />
+		<require-file name="gallery.subs.php" destination="SUBSDIR" />
+		<require-dir name="gallery" destination="$boarddir" />
+		<require-file name="Gallery.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Gallery.english-utf8.php" destination="LANGUAGEDIR/english" />
+		<redirect url="?action=admin;area=gallery;sa=settings;newstart=1" />
+	</install>
+	
+	<upgrade for="1.0 - 1.0.99">
+		<readme>ReadMe.txt</readme>
+		<code>galleryinstall.php</code>
+		<hook hook="integrate_admin_areas" function="ezgallery_integrate_admin_areas" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_menu_buttons" function="ezgallery_integrate_menu_buttons" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_actions" function="ezgallery_integrate_actions" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_load_permissions" function="ezgallery_integrate_load_permissions" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_whos_online" function="ezgallery_integrate_whos_online" file="SOURCEDIR/gallery.integrate.php" />
+
+		<require-file name="galleryadmin.controller.php" destination="SOURCEDIR/admin" />
+		<require-file name="Gallery.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="gallery.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Gallery.template.php" destination="THEMEDIR" />
+		<require-file name="gallery.subs.php" destination="SUBSDIR" />
+		<require-dir name="gallery" destination="$boarddir" />
+		<require-file name="Gallery.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Gallery.english-utf8.php" destination="LANGUAGEDIR/english" />
+		<redirect url="?action=admin;area=gallery;sa=settings;newstart=1" />
+		
+	</upgrade>
+	
+	<uninstall for="1.0 - 1.0.99">
+		<hook reverse="true" hook="integrate_admin_areas" function="ezgallery_integrate_admin_areas" file="SOURCEDIR/gallery.integrate.php" />
+		<hook reverse="true" hook="integrate_menu_buttons" function="ezgallery_integrate_menu_buttons" file="SOURCEDIR/gallery.integrate.php" />
+		<hook reverse="true" hook="integrate_actions" function="ezgallery_integrate_actions" file="SOURCEDIR/gallery.integrate.php" />
+		<hook reverse="true" hook="integrate_load_permissions" function="ezgallery_integrate_load_permissions" file="SOURCEDIR/gallery.integrate.php" />
+		<hook reverse="true" hook="integrate_whos_online" function="ezgallery_integrate_whos_online" file="SOURCEDIR/gallery.integrate.php" />
+		<remove-file name="SOURCEDIR/admin/galleryadmin.controller.php" />
+		<remove-file name="CONTROLLERDIR/Gallery.controller.php" />
+		<remove-file name="SOURCEDIR/gallery.integrate.php" />
+		<remove-file name="THEMEDIR/Gallery.template.php" />
+		<remove-file name="LANGUAGEDIR/english/Gallery.english.php" />
+		<remove-file name="LANGUAGEDIR/english/Gallery.english-utf8.php" />
+		<remove-file name="SUBSDIR/gallery.subs.php" />
+	</uninstall>
+	
+	
+	
+	
+	<install for="1.1 - 1.1.99">
+		<readme>ReadMe.txt</readme>
+		<code>galleryinstall.php</code>
+		<hook hook="integrate_admin_areas" function="ezgallery_integrate_admin_areas" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_menu_buttons" function="ezgallery_integrate_menu_buttons" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_actions" function="ezgallery_integrate_actions2" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_load_permissions" function="ezgallery_integrate_load_permissions" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_whos_online" function="ezgallery_integrate_whos_online" file="SOURCEDIR/gallery.integrate.php" />
+		
+		<require-file name="galleryadmin.controller.php" destination="SOURCEDIR/admin" />
+		<require-file name="gallery.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="gallery.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Gallery.template.php" destination="THEMEDIR" />
+		<require-file name="gallery.subs.php" destination="SUBSDIR" />
+		<require-dir name="gallery" destination="$boarddir" />
+		<require-file name="Gallery.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Gallery.english-utf8.php" destination="LANGUAGEDIR/english" />
+		<redirect url="?action=admin;area=gallery;sa=settings;newstart=1" />
+	</install>
+	
+	<upgrade for="1.1 - 1.1.99">
+		<readme>ReadMe.txt</readme>
+		<code>galleryinstall.php</code>
+		<hook hook="integrate_admin_areas" function="ezgallery_integrate_admin_areas" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_menu_buttons" function="ezgallery_integrate_menu_buttons" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_actions" function="ezgallery_integrate_actions2" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_load_permissions" function="ezgallery_integrate_load_permissions" file="SOURCEDIR/gallery.integrate.php" />
+		<hook hook="integrate_whos_online" function="ezgallery_integrate_whos_online" file="SOURCEDIR/gallery.integrate.php" />
+
+		<require-file name="galleryadmin.controller.php" destination="SOURCEDIR/admin" />
+		<require-file name="gallery.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="gallery.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Gallery.template.php" destination="THEMEDIR" />
+		<require-file name="gallery.subs.php" destination="SUBSDIR" />
+		<require-dir name="gallery" destination="$boarddir" />
+		<require-file name="Gallery.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Gallery.english-utf8.php" destination="LANGUAGEDIR/english" />
+		<redirect url="?action=admin;area=gallery;sa=settings;newstart=1" />
+		
+	</upgrade>
+	
+	<uninstall for="1.1 - 1.1.99">
+		<hook reverse="true" hook="integrate_admin_areas" function="ezgallery_integrate_admin_areas" file="SOURCEDIR/gallery.integrate.php" />
+		<hook reverse="true" hook="integrate_menu_buttons" function="ezgallery_integrate_menu_buttons" file="SOURCEDIR/gallery.integrate.php" />
+		<hook reverse="true" hook="integrate_actions" function="ezgallery_integrate_actions2" file="SOURCEDIR/gallery.integrate.php" />
+		<hook reverse="true" hook="integrate_load_permissions" function="ezgallery_integrate_load_permissions" file="SOURCEDIR/gallery.integrate.php" />
+		<hook reverse="true" hook="integrate_whos_online" function="ezgallery_integrate_whos_online" file="SOURCEDIR/gallery.integrate.php" />
+		<remove-file name="SOURCEDIR/admin/galleryadmin.controller.php" />
+		<remove-file name="CONTROLLERDIR/gallery.controller.php" />
+		<remove-file name="SOURCEDIR/gallery.integrate.php" />
+		<remove-file name="THEMEDIR/Gallery.template.php" />
+		<remove-file name="LANGUAGEDIR/english/Gallery.english.php" />
+		<remove-file name="LANGUAGEDIR/english/Gallery.english-utf8.php" />
+		<remove-file name="SUBSDIR/gallery.subs.php" />
+	</uninstall>
+	
+</package-info>

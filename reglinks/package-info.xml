@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+<package-info xmlns="http://www.elkarte.net/site/package-info" xmlns:elk="http://www.elkarte.net/">
+	<id>vbgamer45:RegLinks</id>
+	<name>Registered Links</name>
+	<type>modification</type>
+	<version>3.0</version>
+
+	<install for="1.0 - 1.0.99">
+		<readme>ReadMe.txt</readme>
+		<require-file name="reglinks.integrate.php" destination="SOURCEDIR" />
+		<require-file name="reglinks.english.php" destination="LANGUAGEDIR/english" />
+		<hook hook="integrate_post_parsebbc" function="reglinks_integrate_post_parsebbc" file="SOURCEDIR/reglinks.integrate.php" />
+	</install>
+
+	<uninstall for="1.0 - 1.0.99">
+		<hook reverse="true" hook="integrate_post_parsebbc" function="reglinks_integrate_post_parsebbc" file="SOURCEDIR/reglinks.integrate.php" />
+		<remove-file name="SOURCEDIR/reglinks.integrate.php" />
+		<remove-file name="LANGUAGEDIR/english/reglinks.english.php" />
+	</uninstall>
+	
+	
+	<install for="1.1 - 1.1.99">
+		<readme>ReadMe.txt</readme>
+		<require-file name="reglinks.integrate.php" destination="SOURCEDIR" />
+		<require-file name="reglinks.english.php" destination="LANGUAGEDIR/english" />
+		<hook hook="integrate_post_bbc_parser" function="reglinks_integrate_post_parsebbc2" file="SOURCEDIR/reglinks.integrate.php" />
+	</install>
+
+	<uninstall for="1.1 - 1.1.99">
+		<hook reverse="true" hook="integrate_post_bbc_parser" function="reglinks_integrate_post_parsebbc2" file="SOURCEDIR/reglinks.integrate.php" />
+		<remove-file name="SOURCEDIR/reglinks.integrate.php" />
+		<remove-file name="LANGUAGEDIR/english/reglinks.english.php" />
+	</uninstall>	
+	
+</package-info>

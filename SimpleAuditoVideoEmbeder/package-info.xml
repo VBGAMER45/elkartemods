@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+<package-info xmlns="http://www.elkarte.net/site/package-info" xmlns:elk="http://www.elkarte.net/">
+	<id>vbgamer45:autoembedmediapro</id>
+	<name>Simple Audio Video Embedder</name>
+	<type>modification</type>
+	<version>6.3</version>
+	
+
+	<upgrade from="all" for="1.0 - 1.0.99">
+		<redirect url="?action=admin;area=mediapro;sa=settings">redirect.txt</redirect>
+		<readme>ReadMe.txt</readme>
+		<require-file name="AutoEmbedMediaPro.template.php" destination="THEMEDIR" />
+		<require-file name="AutoEmbedMediaPro.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="AutoEmbedMediaPro.english-utf8.php" destination="LANGUAGEDIR/english" />
+		<require-dir name="videos" destination="BOARDDIR" />
+		<require-file name="AutoEmbedMediaPro.integrate.php" destination="SOURCEDIR" />
+		<require-file name="AutoEmbedMediaPro.controller.php" destination="SOURCEDIR/admin" />
+		<require-file name="AutoEmbedMediaPro.subs.php" destination="SUBSDIR" />
+		
+		
+		<hook hook="integrate_admin_areas" function="mediapro_integrate_admin_areas" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />
+		<hook hook="integrate_buffer" function="mediapro_integrate_buffer" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />		
+		<hook hook="integrate_post_parsebbc" function="mediapro_integrate_post_parsebbc" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />
+		
+		
+		<code>AutoEmbedMediaProInstall.php</code>
+		
+	</upgrade>
+
+	<install for="1.0 - 1.0.99">
+		<redirect url="?action=admin;area=mediapro;sa=settings">redirect.txt</redirect>
+		<readme>ReadMe.txt</readme>
+		<require-file name="AutoEmbedMediaPro.template.php" destination="THEMEDIR" />
+		<require-file name="AutoEmbedMediaPro.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="AutoEmbedMediaPro.english-utf8.php" destination="LANGUAGEDIR/english" />
+		<require-dir name="videos" destination="BOARDDIR" />
+		<require-file name="AutoEmbedMediaPro.integrate.php" destination="SOURCEDIR" />
+		<require-file name="AutoEmbedMediaPro.controller.php" destination="SOURCEDIR/admin" />
+		<require-file name="AutoEmbedMediaPro.subs.php" destination="SUBSDIR" />
+		<code>AutoEmbedMediaProInstall.php</code>
+		<hook hook="integrate_admin_areas" function="mediapro_integrate_admin_areas" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />
+		<hook hook="integrate_buffer" function="mediapro_integrate_buffer" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />		
+		<hook hook="integrate_post_parsebbc" function="mediapro_integrate_post_parsebbc" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />	
+	</install>
+	
+	
+
+	<uninstall for="1.0 - 1.0.99">
+	
+		<hook reverse="true"  hook="integrate_admin_areas" function="mediapro_integrate_admin_areas" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />
+		<hook reverse="true"  hook="integrate_buffer" function="mediapro_integrate_buffer" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />	
+		<hook reverse="true" hook="integrate_post_parsebbc" function="mediapro_integrate_post_parsebbc" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />
+		
+		<remove-file name="THEMEDIR/AutoEmbedMediaPro.template.php" />
+		<remove-file name="LANGUAGEDIR/english/AutoEmbedMediaPro.english.php" />
+		<remove-file name="LANGUAGEDIR/english/AutoEmbedMediaPro.english-utf8.php" />
+		
+		<remove-file name="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />
+		<remove-file name="SOURCEDIR/admin/AutoEmbedMediaPro.controller.php" />
+		<remove-file name="SUBSDIR/AutoEmbedMediaPro.subs.php" />
+	
+	</uninstall>
+	
+
+
+
+
+
+
+	<upgrade from="all" for="1.1 - 1.1.99">
+		<redirect url="?action=admin;area=mediapro;sa=settings">redirect.txt</redirect>
+		<readme>ReadMe.txt</readme>
+		<require-file name="AutoEmbedMediaPro.template.php" destination="THEMEDIR" />
+		<require-file name="AutoEmbedMediaPro.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="AutoEmbedMediaPro.english-utf8.php" destination="LANGUAGEDIR/english" />
+		<require-dir name="videos" destination="BOARDDIR" />
+		<require-file name="AutoEmbedMediaPro.integrate.php" destination="SOURCEDIR" />
+		<require-file name="AutoEmbedMediaPro.controller.php" destination="SOURCEDIR/admin" />
+		<require-file name="AutoEmbedMediaPro.subs.php" destination="SUBSDIR" />
+		
+		
+		<hook hook="integrate_admin_areas" function="mediapro_integrate_admin_areas" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />
+		<hook hook="integrate_buffer" function="mediapro_integrate_buffer" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />		
+		<hook hook="integrate_post_bbc_parser" function="mediapro_integrate_post_parsebbc2" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />
+		
+		
+		<code>AutoEmbedMediaProInstall.php</code>
+		
+	</upgrade>
+
+	<install for="1.1 - 1.1.99">
+		<redirect url="?action=admin;area=mediapro;sa=settings">redirect.txt</redirect>
+		<readme>ReadMe.txt</readme>
+		<require-file name="AutoEmbedMediaPro.template.php" destination="THEMEDIR" />
+		<require-file name="AutoEmbedMediaPro.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="AutoEmbedMediaPro.english-utf8.php" destination="LANGUAGEDIR/english" />
+		<require-dir name="videos" destination="BOARDDIR" />
+		<require-file name="AutoEmbedMediaPro.integrate.php" destination="SOURCEDIR" />
+		<require-file name="AutoEmbedMediaPro.controller.php" destination="SOURCEDIR/admin" />
+		<require-file name="AutoEmbedMediaPro.subs.php" destination="SUBSDIR" />
+		<code>AutoEmbedMediaProInstall.php</code>
+		<hook hook="integrate_admin_areas" function="mediapro_integrate_admin_areas" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />
+		<hook hook="integrate_buffer" function="mediapro_integrate_buffer" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />		
+		<hook hook="integrate_post_bbc_parser" function="mediapro_integrate_post_parsebbc2" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />	
+	</install>
+	
+	
+
+	<uninstall for="1.1 - 1.1.99">
+	
+		<hook reverse="true"  hook="integrate_admin_areas" function="mediapro_integrate_admin_areas" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />
+		<hook reverse="true"  hook="integrate_buffer" function="mediapro_integrate_buffer" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />	
+		<hook reverse="true" hook="integrate_post_bbc_parser" function="mediapro_integrate_post_parsebbc2" file="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />
+		
+		<remove-file name="THEMEDIR/AutoEmbedMediaPro.template.php" />
+		<remove-file name="LANGUAGEDIR/english/AutoEmbedMediaPro.english.php" />
+		<remove-file name="LANGUAGEDIR/english/AutoEmbedMediaPro.english-utf8.php" />
+		
+		<remove-file name="SOURCEDIR/AutoEmbedMediaPro.integrate.php" />
+		<remove-file name="SOURCEDIR/admin/AutoEmbedMediaPro.controller.php" />
+		<remove-file name="SUBSDIR/AutoEmbedMediaPro.subs.php" />
+	
+	</uninstall>
+	
+</package-info>

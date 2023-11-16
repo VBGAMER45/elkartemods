@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+
+<package-info xmlns="http://www.elkarte.net/site/package-info" xmlns:elk="http://www.elkarte.net/">
+	<name>Discord Who's Online</name>
+	<id>vbgamer45:discordonline</id>
+	<type>modification</type>
+	<version>1.0.1</version>
+
+	<install for="1.1 - 1.1.99">
+		<readme type="file" parsebbc="true">readme.txt</readme>
+		<redirect url="?action=admin;area=addonsettings;sa=general" timeout="5" type="inline">Redirecting...</redirect>
+		<require-file name="discordonline.php" destination="SOURCEDIR" />
+		<require-file name="discordonline.english.php" destination="LANGUAGEDIR/english" />
+
+		<hook hook="integrate_credits" function="discordonline_credits" file="SOURCEDIR/discordonline.php" />
+		<hook hook="integrate_general_mod_settings" function="discordonline_mod_settings" file="SOURCEDIR/discordonline.php" />
+		<hook hook="integrate_mark_read_button" function="discordonline_boardlayout" file="SOURCEDIR/discordonline.php" />
+
+	</install>
+	<uninstall for="1.1 - 1.1.99">
+
+		<hook reverse="true" hook="integrate_credits" function="discordonline_credits" file="SOURCEDIR/discordonline.php" />
+		<hook reverse="true" hook="integrate_general_mod_settings" function="discordonline_mod_settings" file="SOURCEDIR/discordonline.php" />
+		<hook reverse="true" hook="integrate_mark_read_button" function="discordonline_boardlayout" file="SOURCEDIR/discordonline.php" />
+
+		<remove-file name="SOURCEDIR/discordonline.php" />
+		<remove-file name="LANGUAGEDIR/english/discordonline.english.php" />
+
+	</uninstall>
+	
+
+	
+</package-info>

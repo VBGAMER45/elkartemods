@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+<package-info xmlns="http://www.elkarte.net/site/package-info" xmlns:elk="http://www.elkarte.net/">
+	<name>Giphy</name>
+	<id>vbgamer45:giphy</id>
+	<type>modification</type>
+	<version>1.0</version>
+
+	<install for="1.1-1.1.99">
+		<readme type="file" parsebbc="true">readme.txt</readme>
+
+		<require-file name="giphy.english.php" destination="LANGUAGEDIR/english">The language strings</require-file>
+		<require-file name="giphy.php" destination="SUBSDIR">The hooks</require-file>
+		<hook hook="integrate_general_mod_settings" file="SUBSDIR/giphy.php" function="giphy_mod_settings" />
+        <hook hook="integrate_credits" file="SUBSDIR/giphy.php" function="giphy_credits" />
+        <hook hook="integrate_bbc_buttons" file="SUBSDIR/giphy.php" function="giphy_bbc_buttons" />
+        <hook hook="integrate_sceditor_options" file="SUBSDIR/giphy.php" function="giphy_sceditor" />
+
+
+
+		<require-file name="giphy10.png" destination="THEMEDIR/images/bbc" />
+		<require-file name="scegiphy.js" destination="THEMEDIR/scripts" />
+        <redirect url="?action=admin;area=addonsettings;sa=general" />
+	</install>
+	<uninstall for="1.1-1.1.99">
+        <remove-file name="SUBSDIR/giphy.php" />
+		<remove-file name="LANGUAGEDIR/english/giphy.english.php" />
+
+		<remove-file name="THEMEDIR/images/bbc/giphy10.png" />
+		<remove-file name="THEMEDIR/scripts/scegiphy.js" />
+
+
+		<hook reverse="true"  hook="integrate_general_mod_settings" file="SUBSDIR/giphy.php" function="giphy_mod_settings" />
+        <hook reverse="true"  hook="integrate_credits" file="SUBSDIR/giphy.php" function="giphy_credits" />
+        <hook reverse="true"  hook="integrate_bbc_buttons" file="SUBSDIR/giphy.php" function="giphy_bbc_buttons" />
+        <hook reverse="true"  hook="integrate_sceditor_options" file="SUBSDIR/giphy.php" function="giphy_sceditor" />
+	</uninstall>
+</package-info>

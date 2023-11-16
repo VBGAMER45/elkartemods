@@ -1,0 +1,13 @@
+ezGallery Lite
+
+6.0
+!Fixed gallery button not loading in Elk 1.1.x 
+
+5.6.2
+!Fixed issue with PHP 7 not like the action index casted to string to fix.
+
+5.6.1
+!Bug fix/cleanup
+
+5.6
+First Release

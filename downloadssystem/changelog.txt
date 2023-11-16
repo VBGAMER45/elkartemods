@@ -1,0 +1,20 @@
+3.0.6
+!Remove create_function for PHP 7.4+ support
+
+3.0.5
+!Fix for PHP 7.4
++Added French translation thanks to augras
+
+3.0.4
++Added check for upload url to be sure it is http:// or https://
+!Permission fixes stats page and search results when using category level permissions
+!Fixes for remote filesize function more checks added. Requires allow_url_fopen to be set
+
+3.0.3
+Updated for Elkarte 1.1.x 
+
+3.0.2
+!Fixed issue with PHP 7 not like the action index casted to string to fix. 
+
+3.0.1
+!Fixed next and previous links in the download system.
